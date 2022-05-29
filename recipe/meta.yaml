@@ -14,7 +14,7 @@ build:
     - bio_embeddings = bio_embeddings.utilities.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 10
 
 requirements:
   host:
@@ -22,26 +22,26 @@ requirements:
     - python >=3.7,<3.10
     - poetry >=1.1.0
   run:
-    - appdirs >=1.4.4,<2.0.0
-    - atomicwrites >=1.4.0,<2.0.0
-    - biopython >=1.79,<2.0
-    - gensim >=3.8.2,<4.0.0
-    - h5py >=3.2.1,<4.0.0
-    - humanize >=3.2.0,<4.0.0
-    - importlib_metadata >=4.6.1,<5.0.0
-    - lock >=2018.3.25,<2019.0.0
-    - matplotlib-base >=3.2.1,<4.0.0
-    - numpy >=1.18.3,<2.0.0
-    - pandas >=1.2.0,<2.0.0
-    - plotly >=5.1.0,<6.0.0
     - python >=3.7
-    - python-slugify >=5.0.2,<6.0.0
-    - ruamel.yaml >=0.17.10,<0.18.0
+    - appdirs >=1.4.4
+    - atomicwrites >=1.4.0
+    - biopython >=1.79
+    - gensim >=3.8.2
+    - h5py >=3.2.1
+    - humanize >=3.2.0
+    - importlib_metadata >=4.6.1
+    - lock >=2018.3.25
+    - matplotlib-base >=3.2.1
+    - numpy >=1.18.3
+    - pandas >=1.2.0
+    - plotly >=5.1.0
+    - python-slugify >=5.0.2
+    - ruamel.yaml >=0.17.10
     - scikit-learn >=0.24.0
-    - scipy >=1.4.1,<2.0.0
-    - pytorch >=1.8.0,<=1.10.0
-    - tqdm >=4.45.0,<5.0.0
-    - umap-learn >=0.5.1,<0.6.0
+    - scipy >=1.4.1
+    - pytorch >=1.8.0
+    - tqdm >=4.45.0
+    - umap-learn >=0.5.1
 
 test:
   imports:
