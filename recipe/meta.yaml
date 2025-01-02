@@ -29,7 +29,7 @@ requirements:
     - gensim >=3.8.2
     - h5py >=3.2.1
     - humanize >=3.2.0
-    - importlib_metadata >=4.6.1
+    - importlib-metadata >=4.6.1
     - lock >=2018.3.25
     - matplotlib-base >=3.2.1
     - numpy >=1.18.3
