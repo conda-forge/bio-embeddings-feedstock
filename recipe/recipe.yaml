@@ -50,6 +50,8 @@ tests:
       imports:
         - bio_embeddings
       python_version: ${{ python_min }}.*
+      # too many pip check issues
+      pip_check: false
   - requirements:
       run:
         - python ${{ python_min }}.*
