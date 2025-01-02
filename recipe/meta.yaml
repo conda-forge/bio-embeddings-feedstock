@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bio_embeddings-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bio_embeddings-{{ version }}.tar.gz
   sha256: a82d27d895d971bb30339071440f9c5e75d31cf9f4a8a600d17efe7bea0e8615
 
 build:
@@ -14,15 +14,15 @@ build:
     - bio_embeddings = bio_embeddings.utilities.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 10
+  number: 11
 
 requirements:
   host:
     - pip
-    - python >=3.7,<3.10
+    - python {{ python_min }}
     - poetry >=1.1.0
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - appdirs >=1.4.4
     - atomicwrites >=1.4.0
     - biopython >=1.79
@@ -44,6 +44,8 @@ requirements:
     - umap-learn >=0.5.1
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - bio_embeddings
   commands:
