@@ -1,5 +1,3 @@
-schema_version: 1
-
 context:
   name: bio-embeddings
   version: 0.2.2
@@ -23,7 +21,7 @@ build:
 requirements:
   host:
     - pip
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - poetry >=1.1.0
   run:
     - python >=${{ python_min }}
@@ -40,7 +38,7 @@ requirements:
     - pandas >=1.2.0
     - plotly >=5.1.0
     - python-slugify >=5.0.2
-    - ruamel.yaml >=0.17.10,<0.18.5
+    - ruamel.yaml >=0.17.10,<0.18
     - scikit-learn >=0.24.0
     - scipy >=1.4.1
     - pytorch >=1.8.0
@@ -51,9 +49,10 @@ tests:
   - python:
       imports:
         - bio_embeddings
+      python_version: ${{ python_min }}.*
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - bio_embeddings --help
 
@@ -67,4 +66,3 @@ about:
 extra:
   recipe-maintainers:
     - hadim
-
